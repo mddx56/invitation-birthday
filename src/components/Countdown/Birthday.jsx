@@ -53,7 +53,7 @@ const Birthday = ({ name, day, month }) => {
           days,
           isItBday,
         }));
-        console.log(`${days}:${hours}:${minutes}:${seconds} , ${isItBday}`);
+        //console.log(`${days}:${hours}:${minutes}:${seconds} , ${isItBday}`);
       };
       if (!isItBday) {
         countdown();
