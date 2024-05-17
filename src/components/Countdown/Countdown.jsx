@@ -1,13 +1,13 @@
 import Wish from "./Wish";
 
-const Countdown = ({ countdownData, name }) => {
+const c = ({ countdownData, name }) => {
   if (!countdownData.isItBday) {
     return (
       <div>
-        <h3 className="heading">
+        <h4 className="heading">
           Esperando con emoción el gran día{" "}
           <span className="highlight">{name}</span>
-        </h3>
+        </h4>
         <div className="flex">
           <p>
             {countdownData.days}
