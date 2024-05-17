@@ -1,5 +1,4 @@
 import Wish from "./Wish";
-import "./style.css";
 
 const Countdown = ({ countdownData, name }) => {
   if (!countdownData.isItBday) {
