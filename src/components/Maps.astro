@@ -1,0 +1,50 @@
+---
+import Hero from "../components/Hero.astro";
+---
+
+<div class="stack gap-20">
+  <div class="wrapper about">
+    <Hero title="Direccion" tagline="Ubivacion.">
+      <div class="stack">
+        <iframe
+          src="https://maps.google.com/maps?width=720&height=600&hl=es&q=-17.7834,-63.1822+(Cumplea%C3%B1os)&t=&z=15&ie=UTF8&iwloc=B&output=embed"
+          class="maps"
+          width="720"
+          height="600"
+          style="border:0;"
+          loading="lazy"></iframe>
+      </div>
+    </Hero>
+  </div>
+</div>
+
+<style>
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  .maps {
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  img {
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  @media (min-width: 50em) {
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 60% 1fr;
+    }
+
+    .about > :global(:first-child) {
+      grid-column-start: 2;
+    }
+  }
+</style>
