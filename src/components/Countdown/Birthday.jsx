@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import Countdown from "./Countdown";
+import Hero from "../../components/Hero.astro";
+import "./style.css";
 
 const Birthday = ({ name, day, month }) => {
   const [state, setState] = useState({
@@ -15,6 +17,23 @@ const Birthday = ({ name, day, month }) => {
     month = 6; // Month of the Birthday
     day = 16; // Day of the Birthday
   }
+
+  const styles = {
+    position: "relative",
+    display: "flex",
+    "place-content": "center",
+    "text-align": "center",
+    padding: "0.56em 2em",
+    gap: "0.8em",
+    color: "var(--accent-text-over)",
+    "text-decoration": "none",
+    "line-height": "1.1",
+    "border-radius": "999rem",
+    overflow: "hidden",
+    background: "var(--gradient-accent-orange)",
+    "box-shadow": "var(--shadow-md)",
+    "white-space": "nowrap",
+  };
 
   const currentTime = new Date();
   const currentYear = currentTime.getFullYear();
@@ -84,16 +103,18 @@ const Birthday = ({ name, day, month }) => {
   let monthBday = monthNames[birth.getMonth()];
 
   return (
-    <div className="maps">
+    <>
       <Countdown countdownData={state} name={name} />
       {!isItBday && (
         <>
-          <div className="stack">
-            {day} {monthBday} {currentYear}
+          <div>
+            <span style={styles}>
+              {day} / {monthBday} / {currentYear}
+            </span>
           </div>
         </>
       )}
-    </div>
+    </>
   );
 };
 
