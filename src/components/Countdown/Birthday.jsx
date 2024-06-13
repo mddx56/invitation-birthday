@@ -13,7 +13,7 @@ const Birthday = ({ name, day, month }) => {
   });
 
   if (name === undefined || day === undefined || month === undefined) {
-    name = "Mateo";
+    name = "Luz Paola";
     month = 6; // Month of the Birthday
     day = 16; // Day of the Birthday
   }
@@ -104,16 +104,14 @@ const Birthday = ({ name, day, month }) => {
 
   return (
     <>
-      <Countdown countdownData={state} name={name} />
-      {!isItBday && (
-        <>
-          <div>
-            <span style={styles}>
-              {day} / {monthBday} / {currentYear}
-            </span>
-          </div>
-        </>
-      )}
+      <div class="box">
+        <Countdown countdownData={state} name={name} />
+        {!isItBday && (
+          <span style={styles}>
+            {day} / {monthBday} / {currentYear}
+          </span>
+        )}
+      </div>
     </>
   );
 };
