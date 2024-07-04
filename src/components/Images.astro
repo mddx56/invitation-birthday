@@ -1,0 +1,17 @@
+---
+import Hero from "../components/Hero.astro";
+import MyGallery from "./Rcomponents/Gallery";
+---
+
+<section class="section with-background bg-variant">
+  <div class="gallery">
+    <br />
+    <div class="wrapper gap-20">
+      <Hero title="Galeria de Fotos" tagline="Luz Paola">
+        <div class="stack">
+          <MyGallery client:load />
+        </div>
+      </Hero>
+    </div>
+  </div>
+</section>

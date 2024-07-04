@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Countdown from "./Countdown";
-import Hero from "../../components/Hero.astro";
 import "./style.css";
 
 const Birthday = ({ name, day, month }) => {
@@ -32,7 +31,7 @@ const Birthday = ({ name, day, month }) => {
     overflow: "hidden",
     background: "var(--gradient-accent-orange)",
     "box-shadow": "var(--shadow-md)",
-    "white-space": "nowrap",
+   // "white-space": "nowrap",
   };
 
   const currentTime = new Date();
