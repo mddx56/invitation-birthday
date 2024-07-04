@@ -103,7 +103,7 @@ const Birthday = ({ name, day, month }) => {
 
   return (
     <>
-      <div class="box">
+      <div className="box">
         <Countdown countdownData={state} name={name} />
         {!isItBday && (
           <span style={styles}>
